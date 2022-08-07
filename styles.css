@@ -1,0 +1,279 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0; 
+    
+}
+
+
+
+html {
+    font-family: Baloo;
+    
+}
+
+body {
+   background-image: url(https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2874&q=80);
+  /* Background image is centered vertically and horizontally at all times */
+background-position: center center;
+
+/* Background image doesn't tile */
+background-repeat: repeat;
+
+/* Background image is fixed in the viewport so that it doesn't move when
+the content's height is greater than the image's height */
+background-attachment: fixed;
+
+/* This is what makes the background image rescale based
+on the container's size */
+background-size: clamp(1000px, 60%, 1500px) 100%;
+
+background-color: #5999B6; 
+}
+
+
+#initial-popup-window-background-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+#initial-popup-window, #second-popup-window, #third-popup-window, #fourth-popup-window, #fifth-popup-window, #sixth-popup-window, #seventh-popup-window  {
+    width: 540px; 
+    height: 400px;
+    display: flex; 
+    flex-flow: column wrap; 
+    justify-content: space-between;
+    align-items: center; 
+    background:rgba(1, 1, 1, .4);
+    border-radius: 6px; 
+    text-align: center; 
+    padding: 40px;
+    z-index: 5;
+}
+
+span {
+    background: lightblue;
+    color: black;
+    padding: 10px;
+    border-radius: 3px;
+    line-height: 50px; 
+}
+
+.highlight-green {
+    color: green; 
+}
+
+.undo-highlight {
+    color: #B69558;
+}
+
+.finalize-highlight {
+    color: #B6585A;
+}
+
+#start-button {
+    border-radius: 100%;
+    display: block;
+    width: 200px;
+    height: 200px; 
+    margin: auto; 
+    background: #408830; 
+    margin-top: 100px; 
+    font-weight: 700;
+    box-shadow: 0 9px #999;
+}
+
+#start-button:active {
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+#initial-popup-window {
+    animation: fadeIn; 
+    animation-duration: 3s;
+}
+
+#initial-popup-window h2 {
+    animation: fadeIn; 
+    animation-duration: 1s;
+}
+
+#initial-popup-window label {
+    opacity: 0; 
+    animation: fadeIn;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-duration: 1s; 
+}
+
+#initial-popup-window button {
+    opacity: 0; 
+    animation: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s; 
+}
+
+
+
+
+#welcome-message, #first-set-of-instructions, #second-set-of-instructions, #third-set-of-instructions, #fourth-set-of-instructions, #fifth-set-of-instructions {
+    animation: fadeIn; 
+    animation-duration: 3s;
+    margin: auto auto;
+    font-size: larger;
+
+}
+
+h1 {
+    color: pink;
+    font-size: 4em
+}
+
+h2 {
+    color: #5999B6; 
+    margin-top: -20px
+}
+
+label {
+    color: #5999B6;
+}
+#user-name-input {
+    margin-top: 10px;
+    display: block;
+    font-size: xx-large; 
+    text-align: center; 
+    border-radius: 6px; 
+    background: rgb(212, 212, 223)
+}
+
+#submit-name-button {
+    display: block
+}
+
+#hide {
+   display: grid; 
+  grid-template-columns: 1fr 1fr 0.9fr 1fr 1fr; 
+  grid-template-rows: 0.3fr 0.5fr 5.5fr 0.7fr 0.7fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . ."
+    ". emoji-container1 emoji-container1 emoji-container1 ."
+    "difficulty-slider . . . ."
+    ". button-wrapper button-wrapper button-wrapper ."
+    ". saveArea saveArea saveArea ."; 
+    height: 100vh; 
+    width: 100vw; 
+}
+
+#button-wrapper{
+    grid-area: button-wrapper;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeIn; 
+    animation-duration: 4s;
+
+}
+
+
+
+#emoji-container {
+     grid-area: emoji-container1;
+    text-align: center;
+     background: rgba(250, 250, 250, .3);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px; 
+    animation: fadeIn; 
+    animation-duration: 4s;
+}
+
+#saveArea {
+  grid-area: saveArea; 
+  overflow: scroll;
+  margin-top: 5px;
+  letter-spacing: 20px;
+  font-size: 20px;
+  background: rgba(1, 1, 1, .3);
+  border-radius: 6px; 
+  text-align: center; 
+  animation: fadeIn; 
+    animation-duration: 2s;
+}
+
+
+
+#emoji-container button {
+    font-size: 60px;
+    background: none;
+}
+
+
+
+#button-wrapper button {
+    height: 50px;
+    box-shadow: 0 9px #999;
+    border-radius: 10px; 
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#button-wrapper button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.active-button-state {
+    box-shadow: 0 5px #666 !important;
+    transform: translateY(4px) 
+}
+
+
+
+
+#unshift-btn {
+    width: 15%; 
+    min-width: 80px; 
+    background-color: #B69558;
+}
+
+
+
+
+#push-btn {
+  background-color: #B6585A;
+  width: 15%; 
+  min-width: 80px; 
+}
+
+
+#shift-btn {
+    background-color: #408830;
+    width: 35%;
+    min-width: 80px; 
+}
+
+
+
+
+
+
+#final-display-area {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background:rgba(250, 250, 250, .3);
+  margin-top: -5px; 
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
